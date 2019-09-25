@@ -1,0 +1,25 @@
+-
+  var myFullName = 'Toma Cristi';
+  var myJobTitle = 'unicorn trainer';
+  var socialList = [
+    {icon: 'facebook2', url: 'http://www.facebook.com/cristitoma'},
+    {icon: 'twitter', url: 'http://www.twitter.com/cristitoma'},
+    {icon: 'youtube', url: 'http://www.youtube.com/cristitoma'},
+    {icon: 'google-plus2', url: 'http://www.youtube.com/cristitoma'},
+    {icon: 'skype', url: 'http://www.youtube.com/cristitoma'},
+    {icon: 'linkedin', url: 'http://www.youtube.com/cristitoma'},
+    {icon: 'earth', url: 'http://www.youtube.com/cristitoma'},
+    {icon: 'github', url: 'http://www.youtube.com/cristitoma'},
+    {icon: 'stackoverflow', url: 'http://www.youtube.com/cristitoma'},
+  ];
+
+#landing-page
+.landing-page
+  .landing-page__wrapper
+  h1.landing-page__name=myFullName
+  h2.landing-page__title=myJobTitle
+  ul.landing-page__social
+    each social in socialList
+      li.landing-page__item
+        label.landing-page__label(for="")
+          span(class=`my-cv__icon--${social.icon}`)
