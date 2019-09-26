@@ -1,5 +1,32 @@
 -
   var awardHeader = '#awards'
+  var awardList = [
+  {
+    title: 'Fastest beer drinker',
+    description: 'i have drank the most beers in 10 minutes time',
+    location: 'london',
+    date: '2019',
+  },
+  {
+    title: 'Fastest beer drinker 222',
+    description: '!!!!i have drank the most beers in 10 minutes time',
+    location: '!!!!london',
+    date: '3019',
+  }];
 #award
 .award
   .award__header=awardHeader
+  each award in awardList
+    .award__card
+      .award__icon
+        span.my-cv__icon--trophy
+      .award__title=award.title
+      .award__icon
+        span.my-cv__icon--info
+      .award__description=award.description
+      .award__icon
+        span.my-cv__icon--map2
+      .award__location=award.location
+      .award__icon
+        span.my-cv__icon--calendar
+      .award__date=award.date
