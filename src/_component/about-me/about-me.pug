@@ -1,0 +1,47 @@
+-
+  var myHeader = "#about me"
+  var imagePath = "asset/image/me1.png"
+  var myFullName = "Cristi Toma"
+  var myTitle = "Unicorn trainer"
+  var slogan = "If you re affraid of bears, don t go into the forrest !"
+  var achievements = {
+    title: "title of my achievement",
+    content: "This should be a description of my achievement !This should be a description of my achievement !This should be a description of my achievement !"
+  }
+  var coolStuff = {
+    title: 'ttt',
+    buttonList: [
+      {
+        url:'https://github.com/CristiTomaaa',
+        icon: 'github',
+        label: 'Click to visit my GitHub page !'
+      },
+      {
+        url:'asset/doc/cvcristi.docx',
+        icon: 'github',
+        label: 'Click to download my C.V. !'
+      },
+      {
+        url:'https://nextbrand.uk',
+        icon: 'earth',
+        label: 'Click to visit my website !'
+      },
+    ]
+  }
+
+#about-me
+.about-me
+  .about-me__header=myHeader
+  .about-me__avatar-wrapper
+    img.about-me__avatar(src=imagePath)
+  .about-me__full-name=myFullName
+  .about-me__title=myTitle
+  .about-me__slogan=slogan
+
+  .about-me__title=achievements.title
+  .about-me__content=achievements.content
+
+  each button in coolStuff.buttonList
+    a(href=button.url)
+      span=button.label
+      span(class=`my-cv__icon--${button.icon}`)
