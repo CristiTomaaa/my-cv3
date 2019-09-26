@@ -9,7 +9,7 @@
     content: "This should be a description of my achievement !This should be a description of my achievement !This should be a description of my achievement !"
   }
   var coolStuff = {
-    title: 'ttt',
+    title: 'Grab cool stuff',
     buttonList: [
       {
         url:'https://github.com/CristiTomaaa',
@@ -18,7 +18,7 @@
       },
       {
         url:'asset/doc/cvcristi.docx',
-        icon: 'github',
+        icon: 'file-word',
         label: 'Click to download my C.V. !'
       },
       {
@@ -41,7 +41,9 @@
   .about-me__title=achievements.title
   .about-me__content=achievements.content
 
-  each button in coolStuff.buttonList
-    a(href=button.url)
-      span=button.label
-      span(class=`my-cv__icon--${button.icon}`)
+  .about-me__title=coolStuff.title
+  .about-me__link-list
+    each button in coolStuff.buttonList
+      a.about-me__link(href=button.url)
+        span.about-me__link-description=button.label
+        span(class=`my-cv__icon--${button.icon}`)
